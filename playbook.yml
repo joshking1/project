@@ -1,0 +1,6 @@
+---
+- name: Configure Nginx web servers
+  hosts: aws
+  become: yes
+  roles:
+    - nginx
