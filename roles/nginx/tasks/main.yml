@@ -9,11 +9,11 @@
   template:
     src: nginx.conf.j2
     dest: /etc/nginx/nginx.conf
-    notify:
-      - Restart Nginx
+  notify:
+    - Restart Nginx
 
-- name: Ensure Nginx is running
+- name: Restart Nginx
   service:
     name: nginx
-    state: started
-    enabled: yes
+    state: restarted
+
